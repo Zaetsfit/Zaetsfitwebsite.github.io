@@ -7,6 +7,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+li {
+    list-style-type: none;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: #333;
@@ -19,14 +23,29 @@ body {
 
 .logo {
     background-image: url('https://freehtmlthemes.ru/assets/images/articles/css-fon.jpg');
-    display: flex;
-    justify-content: center;
-    padding: 25px;
-    font-size: 40px;
-    font-weight: 900;
-    color: white;
     max-width: 100%;
+    height: 100%;
 }
+
+.logo .logo_text {
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    font-weight: 900;
+    text-align: center;
+    animation: text 1.5s;
+}
+
+@keyframes text {
+    0% {
+        margin-left: 70%;
+    }
+
+    100% {
+        margin: 0;
+    }
+}
+
 
 nav {
     margin: auto;
@@ -59,6 +78,8 @@ nav {
 
 .mv-100 {
     width: 100%;
+    max-width: 100%;
+    box-shadow: 0 0 0 rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .contact {
@@ -109,7 +130,7 @@ nav {
     margin-top: 10px;
     font-family: 'Kaushan Script', cursive;
 	font-size: 24px;
-	color: #333;
+    color: #333;
 }
 
 .section_title {
@@ -117,7 +138,7 @@ nav {
 	font-size: 30px;
 	color: #333;
 	font-weight: 700;
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .section_title:after {
@@ -177,8 +198,9 @@ nav {
 }
 
 .card_img img {
+    width: 300px;
 	display: block;
-	transition: opacity 0.2 linear;
+	/* transition: opacity 0.2 linear; */
 }
 
 .card_text {
@@ -301,12 +323,124 @@ nav {
     grid-row-end: 9;
 }
 
+footer {
+    margin-top: 50px;
+    background: #303036;
+    color: #d3d3d3;
+}
 
-/* @media screen and (max-width:300px) {
-    body {
-        max-width: 100%;
+.footer_content {
+    height: 100%;
+    display: flex;
+    width: 100%;
+}
+
+.footer_section {
+    text-align: center;
+}
+
+.footer_content .footer_section {
+    flex: 1;
+    padding: 25px;
+    border: 1px solid white;
+}
+
+.footer_content h1,
+.footer_content h2 {
+    color: white;
+}
+
+.footer_content .about h1 span {
+    color: #05f7ff;
+}
+
+.footer_content .about .contact_info span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.footer_content .about .social a {
+    text-decoration: none;
+    color: gray;
+    border: 1px solid gray;
+    width: 45px;
+    height: 41px;
+    padding-top: 7px;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.footer_content .about .social a:hover {
+    border: 1px solid white;
+    color: white;
+    transition: all .3s;
+}
+
+.footer_content .links ul a {
+    color: gray;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 1.2em;
+    transition: all .3s;
+}
+
+.footer_content .links ul a:hover {
+    color: white;
+    margin-left: 15px;
+    transition: all .3s;
+}
+
+.btn_big {
+    padding: .7rem 1.3rem;
+    line-height: 1.3rem;
+}
+
+.contact_input {
+    background: #272727;
+    color: #bebdbd;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.footer_bottom {
+    width: 100%;
+    background: #343a40;
+    color: #686868;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+@media screen and (min-width:1200px) {
+    .card_container {
+        max-width: 500px;
+        flex-direction: column;
+        margin: auto;
+
     }
-} */
+    .card_container .card {
+        padding: 10px;
+    }
+
+    .card_container .card .card_item {
+        width: 500px;
+    }
+
+    .card_container .card_img img {
+        width: 500px;
+    }
+
+}
 
 @media screen and (max-width:998px) {
     .card_container {
@@ -370,12 +504,24 @@ nav {
     }
 }
 
+
 @media screen and (max-width:768px) {
     .topnav a:not(:first-child) {
         display: none;
     }
-    .logo {
-        font-size: 35px;
+    .logo .logo_text {
+        font-size: 25px;
+        animation: text 1.5s;
+    }
+
+    @keyframes text {
+        0% {
+            margin-left: 40%;
+        }
+
+        100% {
+            margin: 0;
+        }
     }
     .topnav a.icon {
         text-align: left;
@@ -460,5 +606,13 @@ nav {
         grid-column-end: 4;
         grid-row-start: 21;
         grid-row-end: 25;
+    }
+
+    .footer_content {
+        flex-direction: column;
+    }
+
+    .footer_content .footer_section {
+        border: none;
     }
 }

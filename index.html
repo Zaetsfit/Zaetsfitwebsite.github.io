@@ -5,12 +5,13 @@
     <script src="https://kit.fontawesome.com/336e99e6b9.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">    <title>Document</title>
 </head>
 <body>
     <header>
-        <div class="logo">WebSite logo</div>
+        <div class="logo">
+            <div class="logo_text">WebSite logo</div> 
+        </div>
         <nav>
             <div class="topnav" id="myTopnav">
                 <a href="#" class="nav_items">HOME</a>
@@ -47,7 +48,7 @@
                     <div class="card_item">
                         <div class="card_inner">
                             <div class="card_img">
-                                <img src="src/card2.jpg" alt="" width="300">
+                                <img src="src/card2.jpg" alt="">
                             </div>
                             <div class="card_text">Super team</div>
                         </div>
@@ -57,7 +58,7 @@
                     <div class="card_item">
                         <div class="card_inner">
                             <div class="card_img">
-                                <img src="src/card3.jpg" alt="" width="300">
+                                <img src="src/card3.jpg" alt="">
                             </div>
                             <div class="card_text">Super team</div>
                         </div>
@@ -180,15 +181,64 @@
             </div>
 
             <div id="to_top_box" class="to_top_box">
-                <a id="to_top_btn" class="to_top_btn" href="#">
+                <a id="to_top_btn" class="to_top_btn" href="">
                     <i class="fas fa-arrow-up"></i>
                 </a>
             </div>
         </div>
     </main>
     <footer>
-        <div class="container">
-            
+        <div class="footer">
+            <div class="footer_content">
+                <div class="footer_section about">
+                    <h1 class="lolo_text"><span>Ava</span>Inspires</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="contact_info">
+                        <span><i class="fas fa-phone"></i>&nbsp; 123-456-789</span>
+                        <span><i class="fas fa-envelope"></i>&nbsp; info@anyinfo.com</span>
+                    </div>
+                    <div class="social">
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer_section links">
+                    <h2>Quick Links</h2>
+                    <br>
+                    <ul>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Mentores</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer_section contact-form">
+                    <h2>Contact us</h2>
+                    <br>
+                    <form action="index.html">
+                        <input type="email" class="text_input contact_input" placeholder="Your email address">
+                        <br>
+                        <button type="submit" class="btn btn_big">
+                            <i class="fas fa-envelope"></i>
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                &copy; | Designed by Vlad Skripets |
+            </div>
         </div>
     </footer>
     <script src="index.js"></script>
